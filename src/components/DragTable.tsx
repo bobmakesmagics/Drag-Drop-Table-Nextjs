@@ -1,4 +1,8 @@
-import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import {
+  Bars2Icon,
+  PencilSquareIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
 import React, { useRef, useState } from 'react';
 
 export const DragTable = () => {
@@ -73,8 +77,11 @@ export const DragTable = () => {
       <td className="px-2 text-red-500">{item.time}</td>
       <td className="px-2 text-red-500">{item.serves}</td>
       <td className="px-2">
-        <button className="border border-blue-500 bg-yellow-100 rounded px-2 md:px-8 uppercase shadow-md">
+        <button className="border border-blue-500 bg-yellow-100 rounded px-2 md:px-8 uppercase shadow-md hidden md:block">
           Edit Recipe
+        </button>
+        <button className="text-green-500 w-5 flex justify-center md:hidden">
+          <PencilSquareIcon />
         </button>
       </td>
       <td className="px-2">
